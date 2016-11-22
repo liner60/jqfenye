@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>分页插件</title>
+<script src="jquery-3.1.0.js"></script>
+<script src="page.js"></script>
+<style>
+  *{margin:0;padding:0;}
+  .clearfix:after{content:"";display:block;width:0;clear:both;}
+  .clearfix{zoom:1;}
+  .left{float:left;}
+  .linkBox{margin:100px;}
+  span.link{background:#ccc;border:1px solid #ccc;}
+  .link{text-decoration:none;background:#000;color:#fff;border:1px solid #000;display:inline-block;height:25px;line-height:25px;border-radius:4px;padding:0 8px;font-size:16px;margin:0 5px;}
+  a.link:hover,.link.active{background:#fff;color:#000;}
+</style>
+</head>
+<body>
+    <div class="linkBox">
+       
+    </div>
+<script>
+   var option={
+	   current:5,
+	   prev:"上一页",
+	   next:"下一页",
+	   pageSize:7,
+	   callback:function(num){
+		  // alert(num);
+	   }
+	}
+   $(".linkBox").creatPage(option);
+</script>
+</body>
+</html>
